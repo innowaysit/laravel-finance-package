@@ -1,0 +1,24 @@
+{
+    "name": "innowaysit/finance",
+    "description": "Income expense tracker",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Innowaysit\\Finance\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Innowaysit\\Finance\\FinanceServiceProvider"
+            ]
+        }
+    },
+    "authors": [
+        {
+            "name": "Dalpat Singh",
+            "email": "dalpatsinghpurohit@gmail.com"
+        }
+    ],
+    "require": {}
+}
