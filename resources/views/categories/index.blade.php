@@ -17,6 +17,7 @@
                             <th>Name</th>
                             <th>Type</th>
                             <th>Status</th>
+                            <th>Created By</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -25,6 +26,13 @@
                                 <td scope="row">{{ $category->name }}</td>
                                 <td>{{ $category->type }}</td>
                                 <td>{{ $category->status }}</td>
+                                <td>
+                                    @if ($category->created_by !== null)
+                                        {{ $category->user->name }}
+                                    @else
+                                        {{ '-' }}
+                                    @endif
+                                </td>
                                 <td>
                                     <a href="{{ route('categories.edit', $category) }}"
                                         class="btn btn-warning btn-sm">edit</a>
